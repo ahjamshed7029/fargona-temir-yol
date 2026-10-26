@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="ООО «Фаргона темир йул таъминот» — аренда складов и ЖД-логистика в Коканде. 2500 м², погрузка вагонов. С 1995 года.">
+<meta name="keywords" content="аренда склада Коканд, ЖД логистика Узбекистан, погрузка вагонов, Farona Temir Yol, warehouse Kokand">
+<title>Farg'ona Temir Yo'l — Аренда складов и ЖД-логистика | Коканд</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --primary: #1e40af;
+  --primary-light: #3b82f6;
+  --secondary: #f59e0b;
+  --gradient-bg: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --gradient-hero: linear-gradient(135deg, #1e40af 0%, #7c3aed 50%, #db2777 100%);
+  --gradient-card1: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  --gradient-card2: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  --gradient-card3: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+}
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Segoe UI', Tahoma, Arial, sans-serif;
+  color: #1e293b;
+  line-height: 1.6;
+  background: linear-gradient(180deg, #f0f9ff 0%, #e0e7ff 50%, #f3e8ff 100%);
+}
+.container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+
+header {
+  background: var(--gradient-bg);
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 4px 20px rgba(102,126,234,0.4);
+}
+.nav { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px; }
+.logo { display: flex; align-items: center; gap: 12px; text-decoration: none; color: #fff; }
+.logo-icon {
+  width: 50px; height: 50px;
+  background: #fff;
+  border-radius: 12px;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+.logo-text { display: flex; flex-direction: column; line-height: 1.2; }
+.logo-title { font-size: 18px; font-weight: 800; color: #fff; }
+.logo-sub { font-size: 11px; color: rgba(255,255,255,0.95); font-weight: 600; }
+nav ul { display: flex; list-style: none; gap: 20px; }
+nav a { color: #fff; text-decoration: none; font-size: 15px; font-weight: 700; text-shadow: 0 2px 4px rgba(0,0,0,0.3); padding: 5px 10px; border-radius: 6px; transition: all .2s; }
+nav a:hover { background: rgba(255,255,255,0.2); transform: translateY(-2px); }
+.header-right { display: flex; align-items: center; gap: 15px; }
+.lang-switch {
+  background: rgba(255,255,255,0.95);
+  color: #1e40af;
+  border: 2px solid #fff;
+  padding: 8px 15px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 800;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.hero {
+  position: relative;
+  color: #fff;
+  padding: 140px 0 120px;
+  text-align: center;
+  background: var(--gradient-hero);
+  overflow: hidden;
+}
+.hero-content { position: relative; z-index: 2; }
+.hero-badge {
+  display: inline-block;
+  background: linear-gradient(135deg, #fbbf24, #f59e0b);
+  color: #1e293b;
+  padding: 10px 25px;
+  border-radius: 30px;
+  font-size: 15px;
+  font-weight: 800;
+  margin-bottom: 25px;
+  box-shadow: 0 6px 20px rgba(251,191,36,0.5);
+}
+.hero h1 { font-size: 48px; margin-bottom: 25px; line-height: 1.1; font-weight: 900; text-shadow: 0 4px 15px rgba(0,0,0,0.4); }
+.hero p { font-size: 20px; max-width: 850px; margin: 0 auto 40px; font-weight: 600; opacity: 0.98; }
+.btn {
+  display: inline-block;
+  background: linear-gradient(135deg, #f59e0b, #fbbf24);
+  color: #1e293b;
+  padding: 18px 45px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: 800;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+  transition: all .3s;
+  box-shadow: 0 8px 25px rgba(245,158,11,0.5);
+}
+.btn:hover { transform: translateY(-4px) scale(1.05); box-shadow: 0 12px 35px rgba(245,158,11,0.6); }
+.btn-outline { background: transparent; border: 3px solid #fff; color: #fff; margin-left: 15px; }
+.btn-outline:hover { background: #fff; color: #7c3aed; }
+
+section { padding: 100px 0; }
+section.alt { background: linear-gradient(180deg, #ffffff 0%, #f0f9ff 100%); }
+.section-title {
+  text-align: center;
+  font-size: 40px;
+  margin-bottom: 18px;
+  color: #1e40af;
+  font-weight: 900;
+}
+.section-sub {
+  text-align: center;
+  color: #64748b;
+  max-width: 750px;
+  margin: 0 auto 60px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.features { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 30px; }
+.feature {
+  background: #fff;
+  padding: 40px 28px;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 10px 35px rgba(0,0,0,0.1);
+  transition: all .3s;
+  border-top: 5px solid var(--gradient-card1);
+}
+.feature:hover { transform: translateY(-10px); box-shadow: 0 20px 50px rgba(0,0,0,0.2); }
+.feature-icon {
+  width: 80px; height: 80px;
+  background: var(--gradient-card1);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  margin: 0 auto 22px;
+  color: #fff;
+  font-size: 36px;
+}
+.feature h3 { color: #1e40af; margin-bottom: 14px; font-size: 22px; font-weight: 800; }
+
+.conditions-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 28px; }
+.cond-card {
+  background: #fff;
+  padding: 35px;
+  border-radius: 16px;
+  border-left: 6px solid var(--primary);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+.cond-card h3 { color: #1e40af; margin-bottom: 20px; font-size: 22px; font-weight: 800; }
+.cond-card ul { list-style: none; }
+.cond-card li { padding: 12px 0; border-bottom: 1px dashed #cbd5e1; display: flex; justify-content: space-between; font-weight: 600; }
+.cond-card li:last-child { border: none; }
+.cond-card li span:last-child { color: #f59e0b; font-weight: 800; }
+
+.cargo-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+.cargo-item {
+  background: #fff;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  transition: all .3s;
+  border-left: 4px solid #f59e0b;
+}
+.cargo-item:hover { transform: translateX(8px); box-shadow: 0 10px 30px rgba(0,0,0,0.15); }
+.cargo-check {
+  width: 36px; height: 36px;
+  background: linear-gradient(135deg, #f59e0b, #fbbf24);
+  color: #fff;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-weight: bold;
+  flex-shrink: 0;
+  font-size: 20px;
+}
+
+.territory-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; }
+.map-container {
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+  height: 400px;
+  background: #e2e8f0;
+}
+.map-container iframe { width: 100%; height: 100%; border: none; }
+.territory-text h3 { color: #1e40af; font-size: 28px; margin-bottom: 20px; font-weight: 800; }
+.territory-text p { margin-bottom: 18px; color: #475569; font-size: 16px; }
+.territory-stats { display: flex; gap: 15px; margin-top: 35px; flex-wrap: wrap; }
+.stat { flex: 1; min-width: 140px; background: #fff; padding: 22px 15px; border-radius: 12px; text-align: center; box-shadow: 0 5px 20px rgba(0,0,0,0.1); border-top: 4px solid #f59e0b; }
+.stat-num { font-size: 32px; font-weight: 900; color: #1e40af; }
+.stat-label { font-size: 13px; color: #64748b; margin-top: 5px; font-weight: 600; }
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+.gallery-item {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+  aspect-ratio: 4/3;
+  position: relative;
+  background: #e2e8f0;
+  transition: transform .3s;
+}
+.gallery-item:hover { transform: scale(1.03); }
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.gallery-item .caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, rgba(0,0,0,0.8));
+  color: #fff;
+  padding: 60px 15px 15px;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.contacts-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 28px; }
+.contact-item {
+  background: #fff;
+  padding: 35px 25px;
+  border-radius: 14px;
+  text-align: center;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+  transition: all .3s;
+  border-top: 5px solid var(--primary);
+}
+.contact-item:hover { transform: translateY(-6px); box-shadow: 0 15px 40px rgba(0,0,0,0.2); }
+.contact-item .icon { font-size: 42px; margin-bottom: 15px; }
+.contact-item h4 { color: #1e40af; margin-bottom: 12px; font-size: 20px; font-weight: 800; }
+.contact-item a, .contact-item p { color: #475569; text-decoration: none; font-weight: 600; display: block; margin: 8px 0; }
+.contact-item a:hover { color: #f59e0b; }
+.contact-btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 25px;
+  background: linear-gradient(135deg, #f59e0b, #fbbf24);
+  color: #1e293b;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 700;
+  transition: all .2s;
+}
+.contact-btn:hover { transform: scale(1.05); box-shadow: 0 6px 20px rgba(245,158,11,0.5); }
+
+footer {
+  background: linear-gradient(135deg, #1e293b, #0f172a);
+  color: #fff;
+  padding: 60px 0 30px;
+  text-align: center;
+}
+footer .logo-title { color: #fff; }
+footer .logo-sub { color: rgba(255,255,255,0.8); }
+footer p { opacity: 0.8; margin-top: 25px; font-size: 14px; }
+
+@media (max-width: 768px) {
+  .hero { padding: 100px 0 80px; }
+  .hero h1 { font-size: 32px; }
+  .section-title { font-size: 28px; }
+  .territory-grid { grid-template-columns: 1fr; }
+  nav ul { gap: 12px; font-size: 13px; }
+  .btn-outline { margin-left: 0; margin-top: 15px; }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container nav">
+    <a href="#" class="logo">
+      <div class="logo-icon">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+          <rect x="2" y="6" width="20" height="10" rx="1.5" fill="#667eea"/>
+          <circle cx="6" cy="18" r="2" fill="#fff"/>
+          <circle cx="18" cy="18" r="2" fill="#fff"/>
+        </svg>
+      </div>
+      <div class="logo-text">
+        <span class="logo-title">FARG'ONA TEMIR YO'L</span>
+        <span class="logo-sub">TA'MINOT • с 1995 года</span>
+      </div>
+    </a>
+    <nav>
+      <ul>
+        <li><a href="#about" data-i18n="nav_about">О компании</a></li>
+        <li><a href="#conditions" data-i18n="nav_services">Услуги</a></li>
+        <li><a href="#cargo" data-i18n="nav_cargo">Грузы</a></li>
+        <li><a href="#territory" data-i18n="nav_territory">Территория</a></li>
+        <li><a href="#gallery" data-i18n="nav_gallery">Фото</a></li>
+        <li><a href="#contact" data-i18n="nav_contact">Контакты</a></li>
+      </ul>
+    </nav>
+    <div class="header-right">
+      <select class="lang-switch" onchange="setLanguage(this.value)">
+        <option value="ru">🇷🇺 Русский</option>
+        <option value="uz">🇺🇿 O'zbekcha</option>
+        <option value="en">🇬🇧 English</option>
+        <option value="zh">🇨🇳 中文</option>
+      </select>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container hero-content">
+    <div class="hero-badge" data-i18n="hero_badge">🚂 РАБОТАЕМ С 1995 ГОДА</div>
+    <h1 data-i18n="hero_title">Аренда складов и ЖД-логистика в Коканде</h1>
+    <p data-i18n="hero_desc">ООО «Фаргона темир йул таъминот» — 2500 м² складских помещений с прямым подъездом железнодорожных путей. Погрузка, выгрузка, хранение грузов.</p>
+    <a href="#contact" class="btn" data-i18n="hero_btn1">Оставить заявку</a>
+    <a href="#conditions" class="btn btn-outline" data-i18n="hero_btn2">Наши услуги</a>
+  </div>
+</section>
+
+<section id="about">
+  <div class="container">
+    <h2 class="section-title" data-i18n="about_title">Почему выбирают нас</h2>
+    <p class="section-sub" data-i18n="about_sub">Более 30 лет опыта в складской аренде и железнодорожной логистике в Ферганской долине</p>
+    <div class="features">
+      <div class="feature">
+        <div class="feature-icon">🚂</div>
+        <h3 data-i18n="f1_title">Собственные ЖД-пути</h3>
+        <p data-i18n="f1_desc">Прямое подключение к железнодорожной сети Узбекистана. Приём и отправка вагонов без задержек.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">🏭</div>
+        <h3 data-i18n="f2_title">2500 м² складов</h3>
+        <p data-i18n="f2_desc">9 помещений: 8 по 200 м² и одно 400 м². Сухие, проветриваемые, с удобным подъездом.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">🔒</div>
+        <h3 data-i18n="f3_title">Охрана 24/7</h3>
+        <p data-i18n="f3_desc">Круглосуточная охрана, видеонаблюдение, контроль доступа на территорию.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">📅</div>
+        <h3 data-i18n="f4_title">30+ лет на рынке</h3>
+        <p data-i18n="f4_desc">Основаны в 1995 году. Надёжный партнёр для бизнеса в Узбекистане и СНГ.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="conditions" class="alt">
+  <div class="container">
+    <h2 class="section-title" data-i18n="services_title">Наши услуги</h2>
+    <p class="section-sub" data-i18n="services_sub">Полный спектр складских и логистических услуг</p>
+    <div class="conditions-grid">
+      <div class="cond-card">
+        <h3 data-i18n="s1_title">📦 Аренда склада 200 м²</h3>
+        <ul>
+          <li><span data-i18n="s_area">Площадь</span><span>200 м²</span></li>
+          <li><span data-i18n="s_qty">Количество</span><span data-i18n="s1_qty">8 помещений</span></li>
+          <li><span data-i18n="s_type">Тип</span><span data-i18n="s1_type">крытый, сухой</span></li>
+          <li><span data-i18n="s_sec">Охрана</span><span>24/7</span></li>
+        </ul>
+      </div>
+      <div class="cond-card">
+        <h3 data-i18n="s2_title">🏭 Аренда склада 400 м²</h3>
+        <ul>
+          <li><span data-i18n="s_area">Площадь</span><span>400 м²</span></li>
+          <li><span data-i18n="s_qty">Количество</span><span data-i18n="s2_qty">1 помещение</span></li>
+          <li><span data-i18n="s_type">Тип</span><span data-i18n="s2_type">крытый, сухой</span></li>
+          <li><span data-i18n="s_acc">Подъезд</span><span data-i18n="s2_acc">для фур и ЖД</span></li>
+        </ul>
+      </div>
+      <div class="cond-card">
+        <h3 data-i18n="s3_title">🚃 ЖД-погрузка/выгрузка</h3>
+        <ul>
+          <li><span data-i18n="s3_wag">Типы вагонов</span><span data-i18n="s3_wag_v">крытые, цистерны</span></li>
+          <li><span data-i18n="s3_yard">Площадка</span><span>2500 м²</span></li>
+          <li><span data-i18n="s3_sc">Весы</span><span data-i18n="s3_yes">есть</span></li>
+          <li><span data-i18n="s3_tech">Техника</span><span data-i18n="s3_tech_v">погрузочная</span></li>
+        </ul>
+      </div>
+      <div class="cond-card">
+        <h3 data-i18n="s4_title">🏢 Офисное помещение</h3>
+        <ul>
+          <li><span data-i18n="s4_loc">Расположение</span><span data-i18n="s4_loc_v">на территории</span></li>
+          <li><span data-i18n="s4_com">Коммуникации</span><span data-i18n="s4_com_v">все есть</span></li>
+          <li><span data-i18n="s4_cli">Для клиентов</span><span data-i18n="s4_cli_v">удобно</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="cargo">
+  <div class="container">
+    <h2 class="section-title" data-i18n="cargo_title">Какие грузы принимаем</h2>
+    <p class="section-sub" data-i18n="cargo_sub">Работаем с широким спектром грузов</p>
+    <div class="cargo-list">
+      <div class="cargo-item"><div class="cargo-check">✓</div><div data-i18n="c1">Стройматериалы</div></div>
+      <div class="cargo-item"><div class="cargo-check">✓</div><div data-i18n="c2">Металлопрокат</div></div>
+      <div class="cargo-item"><div class="cargo-check">✓</div><div data-i18n="c3">Продукты питания</div></div>
+      <div class="cargo-item"><div class="cargo-check">✓</div><div data-i18n="c4">Удобрения</div></div>
+      <div class="cargo-item"><div class="cargo-check">✓</div><div data-i18n="c5">Текстиль</div></div>
+      <div class="cargo-item"><div class="cargo-check">✓</div><div data-i18n="c6">Оборудование</div></div>
+      <div class="cargo-item"><div class="cargo-check">✓</div><div data-i18n="c7">Пиломатериалы</div></div>
+      <div class="cargo-item"><div class="cargo-check">✓</div><div data-i18n="c8">Контейнеры</div></div>
+      <div class="cargo-item"><div class="cargo-check">✓</div><div data-i18n="c9">Сельхозпродукция</div></div>
+      <div class="cargo-item"><div class="cargo-check">✓</div><div data-i18n="c10">Жидкости</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="territory" class="alt">
+  <div class="container">
+    <h2 class="section-title" data-i18n="terr_title">Наша территория</h2>
+    <p class="section-sub" data-i18n="terr_sub">1,088 га собственной территории в Коканде</p>
+    <div class="territory-grid">
+      <div class="map-container">
+        <iframe src="https://www.google.com/maps?q=40.515769,70.930253&hl=ru&z=16&output=embed" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+      <div class="territory-text">
+        <h3 data-i18n="terr_h">1,088 га с развитой инфраструктурой</h3>
+        <p data-i18n="terr_p1">Собственная территория с необходимыми коммуникациями, круглосуточной охраной и видеонаблюдением.</p>
+        <p data-i18n="terr_p2">Удобное расположение в центре Ферганской долины с выходом на автодороги и ЖД-сеть.</p>
+        <div class="territory-stats">
+          <div class="stat"><div class="stat-num">1,088</div><div class="stat-label" data-i18n="stat1">гектаров</div></div>
+          <div class="stat"><div class="stat-num">2500</div><div class="stat-label" data-i18n="stat2">м² складов</div></div>
+          <div class="stat"><div class="stat-num">30+</div><div class="stat-label" data-i18n="stat3">лет опыта</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="gallery">
+  <div class="container">
+    <h2 class="section-title" data-i18n="gal_title">Фотографии базы</h2>
+    <p class="section-sub" data-i18n="gal_sub">Реальные фотографии нашей территории и инфраструктуры</p>
+    <div class="gallery-grid">
+      <div class="gallery-item">
+        <img src="images/territory.jpg" alt="Общий вид территории">
+        <div class="caption" data-i18n="gal1">Общий вид территории</div>
+      </div>
+      <div class="gallery-item">
+        <img src="images/warehouse-interior.jpg" alt="Склад внутри">
+        <div class="caption" data-i18n="gal2">Складское помещение внутри</div>
+      </div>
+      <div class="gallery-item">
+        <img src="images/red-wagon.jpg" alt="Крытый вагон">
+        <div class="caption" data-i18n="gal3">Крытый железнодорожный вагон</div>
+      </div>
+      <div class="gallery-item">
+        <img src="images/tankers-building.jpg" alt="Цистерны у здания">
+        <div class="caption" data-i18n="gal4">Цистерны на путях</div>
+      </div>
+      <div class="gallery-item">
+        <img src="images/tanker-close.jpg" alt="Цистерна крупно">
+        <div class="caption" data-i18n="gal5">Железнодорожная цистерна</div>
+      </div>
+      <div class="gallery-item">
+        <img src="images/tanker-train.jpg" alt="Состав цистерн">
+        <div class="caption" data-i18n="gal6">Длинный состав цистерн</div>
+      </div>
+      <div class="gallery-item">
+        <img src="images/office.jpg" alt="Офисное помещение">
+        <div class="caption" data-i18n="gal7">Офисное помещение</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="container">
+    <h2 class="section-title" data-i18n="cont_title">Контакты</h2>
+    <div class="contacts-grid">
+      <div class="contact-item">
+        <div class="icon">📍</div>
+        <h4 data-i18n="cont_addr">Адрес</h4>
+        <p data-i18n="cont_addr_v">г. Коканд, Ферганская область<br>Узбекистан</p>
+      </div>
+      <div class="contact-item">
+        <div class="icon">📞</div>
+        <h4 data-i18n="cont_phone">Телефоны</h4>
+        <a href="tel:+998916500700" style="font-size: 18px; margin-bottom: 5px;">+998 91 650-07-00</a>
+        <br>
+        <a href="tel:+998918832970" style="font-size: 18px; color: var(--secondary); font-weight: 700;">+998 91 883-29-70</a>
+        <div style="margin-top: 15px; display: flex; gap: 10px; justify-content: center; flex-wrap: wrap;">
+          <a href="https://wa.me/998918832970" class="contact-btn" style="background: linear-gradient(135deg, #25D366, #128C7E); color: #fff;">WhatsApp</a>
+          <a href="https://t.me/+998918832970" class="contact-btn" style="background: linear-gradient(135deg, #0088cc, #005f8f); color: #fff;">Telegram</a>
+        </div>
+      </div>
+      <div class="contact-item">
+        <div class="icon">✉️</div>
+        <h4>Email</h4>
+        <a href="mailto:Uzjeldorsnab@mail.ru">Uzjeldorsnab@mail.ru</a>
+        <a href="mailto:Uzjeldorsnab@mail.ru" class="contact-btn" data-i18n="btn_email">Написать</a>
+      </div>
+      <div class="contact-item">
+        <div class="icon">🕐</div>
+        <h4 data-i18n="cont_hours">Режим работы</h4>
+        <p data-i18n="cont_hours_v">Пн–Сб: 08:00 – 18:00<br>Охрана: 24/7</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div style="display:flex; align-items:center; justify-content:center; gap:12px; margin-bottom:15px; flex-wrap:wrap;">
+      <div class="logo-icon">
+        <svg width="30" height="30" viewBox="0 0 24 24" fill="none">
+          <rect x="2" y="6" width="20" height="10" rx="1.5" fill="#fff"/>
+          <circle cx="6" cy="18" r="2" fill="#667eea"/>
+          <circle cx="18" cy="18" r="2" fill="#667eea"/>
+        </svg>
+      </div>
+      <div class="logo-text">
+        <span class="logo-title">FARG'ONA TEMIR YO'L TA'MINOT</span>
+        <span class="logo-sub">© 2026 • <span data-i18n="footer_loc">Коканд, Узбекистан</span></span>
+      </div>
+    </div>
+    <p data-i18n="footer_desc">Аренда складов и ЖД-логистика. С 1995 года.</p>
+  </div>
+</footer>
+
+<script>
+const translations = {
+  ru: {
+    nav_about: "О компании", nav_services: "Услуги", nav_cargo: "Грузы", nav_territory: "Территория", nav_gallery: "Фото", nav_contact: "Контакты",
+    hero_badge: "🚂 РАБОТАЕМ С 1995 ГОДА", hero_title: "Аренда складов и ЖД-логистика в Коканде", hero_desc: "ООО «Фаргона темир йул таъминот» — 2500 м² складских помещений с прямым подъездом железнодорожных путей.", hero_btn1: "Оставить заявку", hero_btn2: "Наши услуги",
+    about_title: "Почему выбирают нас", about_sub: "Более 30 лет опыта в складской аренде и ЖД-логистике",
+    f1_title: "Собственные ЖД-пути", f1_desc: "Прямое подключение к железнодорожной сети Узбекистана.", f2_title: "2500 м² складов", f2_desc: "9 помещений: 8 по 200 м² и одно 400 м².", f3_title: "Охрана 24/7", f3_desc: "Круглосуточная охрана и видеонаблюдение.", f4_title: "30+ лет на рынке", f4_desc: "Основаны в 1995 году. Надёжный партнёр.",
+    services_title: "Наши услуги", services_sub: "Полный спектр складских и логистических услуг",
+    s1_title: "📦 Аренда склада 200 м²", s2_title: "🏭 Аренда склада 400 м²", s3_title: "🚃 ЖД-погрузка/выгрузка", s4_title: "🏢 Офисное помещение",
+    s_area: "Площадь", s_qty: "Количество", s1_qty: "8 помещений", s2_qty: "1 помещение", s_type: "Тип", s1_type: "крытый, сухой", s2_type: "крытый, сухой", s_sec: "Охрана", s_acc: "Подъезд", s2_acc: "для фур и ЖД",
+    s3_wag: "Типы вагонов", s3_wag_v: "крытые, цистерны", s3_yard: "Площадка", s3_sc: "Весы", s3_yes: "есть", s3_tech: "Техника", s3_tech_v: "погрузочная",
+    s4_loc: "Расположение", s4_loc_v: "на территории", s4_com: "Коммуникации", s4_com_v: "все есть", s4_cli: "Для клиентов", s4_cli_v: "удобно",
+    cargo_title: "Какие грузы принимаем", cargo_sub: "Работаем с широким спектром грузов",
+    c1: "Стройматериалы", c2: "Металлопрокат", c3: "Продукты питания", c4: "Удобрения", c5: "Текстиль", c6: "Оборудование", c7: "Пиломатериалы", c8: "Контейнеры", c9: "Сельхозпродукция", c10: "Жидкости",
+    terr_title: "Наша территория", terr_sub: "1,088 га собственной территории", terr_h: "1,088 га с инфраструктурой", terr_p1: "Собственная территория с коммуникациями, охраной и видеонаблюдением.", terr_p2: "Удобное расположение в центре Ферганской долины.",
+    stat1: "гектаров", stat2: "м² складов", stat3: "лет опыта",
+    gal_title: "Фотографии базы", gal_sub: "Реальные фотографии нашей территории", gal1: "Общий вид территории", gal2: "Складское помещение внутри", gal3: "Крытый железнодорожный вагон", gal4: "Цистерны на путях", gal5: "Железнодорожная цистерна", gal6: "Длинный состав цистерн", gal7: "Офисное помещение",
+    cont_title: "Контакты", cont_addr: "Адрес", cont_addr_v: "г. Коканд, Ферганская область<br>Узбекистан", cont_phone: "Телефоны", cont_hours: "Режим работы", cont_hours_v: "Пн–Сб: 08:00 – 18:00<br>Охрана: 24/7", btn_email: "Написать",
+    footer_loc: "Коканд, Узбекистан", footer_desc: "Аренда складов и ЖД-логистика. С 1995 года."
+  },
+  uz: {
+    nav_about: "Kompaniya haqida", nav_services: "Xizmatlar", nav_cargo: "Yuklar", nav_territory: "Hudud", nav_gallery: "Rasmlar", nav_contact: "Aloqa",
+    hero_badge: "🚂 1995-YILDAN ISHLAYMIZ", hero_title: "Qo'qonda ombor ijarasi va TY logistikasi", hero_desc: "«Farg'ona temir yo'l ta'minot» MChJ — 2500 m² ombor xonalari.", hero_btn1: "Ariza qoldirish", hero_btn2: "Bizning xizmatlar",
+    about_title: "Nega bizni tanlaydilar", about_sub: "30 yildan ortiq tajriba",
+    f1_title: "O'z TY yo'llarimiz", f1_desc: "O'zbekiston TY tarmog'iga to'g'ridan-to'g'ri ulanish.", f2_title: "2500 m² omborlar", f2_desc: "9 ta xona: 8 ta 200 m² va 1 ta 400 m².", f3_title: "24/7 qo'riqlash", f3_desc: "Kecha-kunduz qo'riqlash va video kuzatuv.", f4_title: "30+ yil bozorda", f4_desc: "1995-yilda tashkil etilgan.",
+    services_title: "Bizning xizmatlar", services_sub: "To'liq ombor va logistika xizmatlari",
+    s1_title: "📦 200 m² ombor ijarasi", s2_title: "🏭 400 m² ombor ijarasi", s3_title: "🚃 TY yuklash/tushirish", s4_title: "🏢 Ofis xonasi",
+    s_area: "Maydon", s_qty: "Miqdori", s1_qty: "8 ta xona", s2_qty: "1 ta xona", s_type: "Turi", s1_type: "yopiq, quruq", s2_type: "yopiq, quruq", s_sec: "Qo'riqlash", s_acc: "Kirish", s2_acc: "fura va TY uchun",
+    s3_wag: "Vagon turlari", s3_wag_v: "yopiq, tsisterna", s3_yard: "Maydon", s3_sc: "Tarozi", s3_yes: "bor", s3_tech: "Texnika", s3_tech_v: "yuklash",
+    s4_loc: "Joylashuv", s4_loc_v: "hududda", s4_com: "Kommunikatsiyalar", s4_com_v: "barchasi bor", s4_cli: "Mijozlar uchun", s4_cli_v: "qulay",
+    cargo_title: "Qanday yuklar", cargo_sub: "Keng yuklar spektri",
+    c1: "Qurilish materiallari", c2: "Metall prokat", c3: "Oziq-ovqat", c4: "O'g'itlar", c5: "To'qimachilik", c6: "Uskunalar", c7: "Yog'och", c8: "Konteynerlar", c9: "Qishloq xo'jaligi", c10: "Suyuqliklar",
+    terr_title: "Bizning hudud", terr_sub: "1,088 ga o'z hududi", terr_h: "1,088 ga infratuzilma bilan", terr_p1: "Kommunikatsiyalar, qo'riqlash va video kuzatuv bilan.", terr_p2: "Farg'ona vodiysi markazida qulay joylashuv.",
+    stat1: "gektar", stat2: "m² ombor", stat3: "yil tajriba",
+    gal_title: "Baza rasmlari", gal_sub: "Haqiqiy rasmlar", gal1: "Umumiy ko'rinish", gal2: "Ombor ichida", gal3: "Yopiq temir yo'l vagoni", gal4: "Yo'llarda tsisternalar", gal5: "Temir yo'l tsisternasi", gal6: "Uzun tsisternalar tarkibi", gal7: "Ofis xonasi",
+    cont_title: "Aloqa", cont_addr: "Manzil", cont_addr_v: "Qo'qon sh., Farg'ona viloyati<br>O'zbekiston", cont_phone: "Telefonlar", cont_hours: "Ish vaqti", cont_hours_v: "Du–Shan: 08:00 – 18:00<br>Qo'riqlash: 24/7", btn_email: "Yozmoq",
+    footer_loc: "Qo'qon, O'zbekiston", footer_desc: "Ombor ijarasi va TY logistikasi. 1995-yildan."
+  },
+  en: {
+    nav_about: "About", nav_services: "Services", nav_cargo: "Cargo", nav_territory: "Territory", nav_gallery: "Gallery", nav_contact: "Contact",
+    hero_badge: "🚂 OPERATING SINCE 1995", hero_title: "Warehouse & Railway Logistics in Kokand", hero_desc: "LLC «Farg'ona temir yo'l ta'minot» — 2,500 m² warehouse space.", hero_btn1: "Submit Request", hero_btn2: "Our Services",
+    about_title: "Why Choose Us", about_sub: "Over 30 years of experience",
+    f1_title: "Own Railway Tracks", f1_desc: "Direct connection to Uzbekistan railway network.", f2_title: "2,500 m² Warehouses", f2_desc: "9 premises: 8 of 200 m² and one of 400 m².", f3_title: "24/7 Security", f3_desc: "Round-the-clock security and video surveillance.", f4_title: "30+ Years", f4_desc: "Founded in 1995. Reliable partner.",
+    services_title: "Our Services", services_sub: "Full range of warehouse and logistics services",
+    s1_title: "📦 200 m² Warehouse", s2_title: "🏭 400 m² Warehouse", s3_title: "🚃 Railway Loading", s4_title: "🏢 Office Space",
+    s_area: "Area", s_qty: "Quantity", s1_qty: "8 premises", s2_qty: "1 premise", s_type: "Type", s1_type: "covered, dry", s2_type: "covered, dry", s_sec: "Security", s_acc: "Access", s2_acc: "trucks & rail",
+    s3_wag: "Wagon types", s3_wag_v: "covered, tankers", s3_yard: "Yard", s3_sc: "Scales", s3_yes: "yes", s3_tech: "Equipment", s3_tech_v: "loading",
+    s4_loc: "Location", s4_loc_v: "on site", s4_com: "Utilities", s4_com_v: "all included", s4_cli: "For clients", s4_cli_v: "convenient",
+    cargo_title: "Cargo We Accept", cargo_sub: "Wide range of cargo",
+    c1: "Building materials", c2: "Metal products", c3: "Food products", c4: "Fertilizers", c5: "Textiles", c6: "Equipment", c7: "Lumber", c8: "Containers", c9: "Agriculture", c10: "Liquids",
+    terr_title: "Our Territory", terr_sub: "1.088 hectares", terr_h: "1.088 hectares", terr_p1: "Own territory with communications and security.", terr_p2: "Convenient location in Fergana Valley center.",
+    stat1: "hectares", stat2: "m² warehouses", stat3: "years experience",
+    gal_title: "Base Photos", gal_sub: "Real photos", gal1: "General view", gal2: "Warehouse interior", gal3: "Covered railway wagon", gal4: "Tankers on tracks", gal5: "Railway tanker", gal6: "Long tanker train", gal7: "Office space",
+    cont_title: "Contacts", cont_addr: "Address", cont_addr_v: "Kokand, Fergana Region<br>Uzbekistan", cont_phone: "Phones", cont_hours: "Hours", cont_hours_v: "Mon–Sat: 08:00 – 18:00<br>Security: 24/7", btn_email: "Email",
+    footer_loc: "Kokand, Uzbekistan", footer_desc: "Warehouse rental & railway logistics. Since 1995."
+  },
+  zh: {
+    nav_about: "关于公司", nav_services: "服务", nav_cargo: "货物", nav_territory: "场地", nav_gallery: "照片", nav_contact: "联系方式",
+    hero_badge: "🚂 自1995年运营", hero_title: "浩罕仓库租赁和铁路物流", hero_desc: "法拉干纳铁路供应有限公司 — 2500平方米仓库空间，铁路直达。", hero_btn1: "提交请求", hero_btn2: "我们的服务",
+    about_title: "为什么选择我们", about_sub: "在费尔干纳谷地拥有30多年经验",
+    f1_title: "自有铁路线", f1_desc: "直接连接乌兹别克斯坦铁路网。", f2_title: "2500平方米仓库", f2_desc: "9个场地：8个200平方米和1个400平方米。", f3_title: "24/7安保", f3_desc: "全天候安保和视频监控。", f4_title: "30多年经验", f4_desc: "成立于1995年。可靠的合作伙伴。",
+    services_title: "我们的服务", services_sub: "全面的仓储和物流服务",
+    s1_title: "📦 200平方米仓库", s2_title: "🏭 400平方米仓库", s3_title: "🚃 铁路装卸", s4_title: "🏢 办公室",
+    s_area: "面积", s_qty: "数量", s1_qty: "8个场地", s2_qty: "1个场地", s_type: "类型", s1_type: "封闭式、干燥", s2_type: "封闭式、干燥", s_sec: "安保", s_acc: "通道", s2_acc: "卡车和铁路",
+    s3_wag: "车厢类型", s3_wag_v: "封闭式、罐车", s3_yard: "场地", s3_sc: "地磅", s3_yes: "有", s3_tech: "设备", s3_tech_v: "装卸设备",
+    s4_loc: "位置", s4_loc_v: "场地内", s4_com: "设施", s4_com_v: "一应俱全", s4_cli: "为客户", s4_cli_v: "提供便利",
+    cargo_title: "我们接受的货物", cargo_sub: "各种货物",
+    c1: "建筑材料", c2: "金属制品", c3: "食品", c4: "化肥", c5: "纺织品", c6: "设备", c7: "木材", c8: "集装箱", c9: "农产品", c10: "液体",
+    terr_title: "我们的场地", terr_sub: "1.088公顷", terr_h: "1.088公顷", terr_p1: "自有场地，配备通讯和安保。", terr_p2: "位于费尔干纳谷地中心，位置便利。",
+    stat1: "公顷", stat2: "平方米仓库", stat3: "年经验",
+    gal_title: "基地照片", gal_sub: "真实照片", gal1: "全景", gal2: "仓库内部", gal3: "封闭式铁路车厢", gal4: "轨道上的罐车", gal5: "铁路罐车", gal6: "长列罐车", gal7: "办公室",
+    cont_title: "联系方式", cont_addr: "地址", cont_addr_v: "浩罕，费尔干纳州<br>乌兹别克斯坦", cont_phone: "电话", cont_hours: "工作时间", cont_hours_v: "周一至周六：08:00 – 18:00<br>安保：24/7", btn_email: "电子邮件",
+    footer_loc: "浩罕，乌兹别克斯坦", footer_desc: "仓库租赁和铁路物流。始于1995年。"
+  }
+};
+
+function setLanguage(lang) {
+  document.documentElement.lang = lang;
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.getAttribute('data-i18n');
+    if (translations[lang] && translations[lang][key]) {
+      el.innerHTML = translations[lang][key];
+    }
+  });
+  localStorage.setItem('preferred_lang', lang);
+}
+
+const savedLang = localStorage.getItem('preferred_lang') || 'ru';
+document.querySelector('.lang-switch').value = savedLang;
+setLanguage(savedLang);
+</script>
+
+</body>
+</html>
